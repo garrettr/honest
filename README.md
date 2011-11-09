@@ -2,6 +2,8 @@
 
 Honest Appalachia's website. Separate from the file upload infrastructure.
 
+Page infrasturcture is to be similar to Jekyll. You can place HTML files optionally containing Markdown in `/pages`. They will be rendered and served at the url that matches their filename. For example, the file `pages/home.html` renders to `/home/`. Files to be rendered as flat pages must have a `.html` extension.
+
 # Quickstart
 
 To get started with working on this code, first clone the repo
