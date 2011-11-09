@@ -1,0 +1,9 @@
+Flask==0.8
+Flask-FlatPages==0.2
+Jinja2==2.6
+Markdown==2.0.3
+PyYAML==3.10
+Werkzeug==0.8.1
+distribute==0.6.19
+pydns==2.3.4
+wsgiref==0.1.2
