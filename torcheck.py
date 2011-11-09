@@ -51,6 +51,9 @@ def get_client_ip(request):
         ip = x_forwarded_for.split(',')[0]
     else:
         ip = request.environ.get('REMOTE_ADDR')
+
+    print "get_client_ip: ", ip
+
     return ip
 
 def is_using_tor(request):
