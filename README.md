@@ -23,6 +23,8 @@ You will need to install Python library dependencies to use this code. To do thi
 We recommend using pip to install these packages: `easy_install pip`, and installing into your virtualenv.
 
 1.  [Flask web microframework]: `pip install flask`
+2.  [pydns]: `pip install pydns`
 
 [virtualenv]: http://www.arthurkoziel.com/2008/10/22/working-virtualenv/
 [Flask web microframework]: http://flask.pocoo.org/
+[pydns]: http://pydns.sourceforge.net/

@@ -1,5 +1,7 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from flaskext.flatpages import FlatPages
+
+import torcheck
 
 app = Flask(__name__)
 app.debug = True
@@ -10,9 +12,19 @@ pages = FlatPages(app)
 def home():
     return redirect('/home')
 
-@app.route('/upload', methods=['GET'])
+@app.route('/upload/', methods=['GET'])
 def upload():
-    pass
+    '''
+    Checks if this request came over the Tor network.
+    
+    If so, redirects to hidden service.
+    Otherwise, displays a warning and a link to the docs on safe uploading.
+    '''
+    if torcheck.is_using_tor(request):
+        # redirect to hidden service
+        redirect_to("http://www.google.com")
+    else:
+        return render_template("upload.html")
 
 @app.route('/<path:path>/')
 def page(path):
