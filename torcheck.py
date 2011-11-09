@@ -45,14 +45,13 @@ def tor_check(clientIp, ELPort):
 
 def get_client_ip(request):
     ip = request.environ.get('REMOTE_ADDR')
-    print "REMOTE_ADDR: ", request.environ.get('REMOTE_ADDR')
-    print "HTTP_X_REAL_IP: ", request.environ.get('X_REAL_IP')
-    print "X_FORWARDED_FOR: ", request.environ.get('X_FORWARDED_FOR')
     #x_forwarded_for = request.environ.get('X_FORWARDED_FOR')
     #if x_forwarded_for:
     #    ip = x_forwarded_for.split(',')[0]
     #else:
     #    ip = request.environ.get('REMOTE_ADDR')
+    for item in request.environ.items():
+        print item
 
     return ip
 
