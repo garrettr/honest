@@ -1,0 +1,10 @@
+body {
+  font: 16px/1.5 'Georgia', serif;
+  background-color: white;
+  color: #333;
+}
+
+.document {
+  width: 940px;
+  margin: 24px auto 0 auto;
+}

@@ -2,10 +2,15 @@
 <html>
   <head>
     <title>{% block title %}{% endblock %} | Honest Appalachia </title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='html5reset-1.6.1.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='layout.css') }}">
     {% block head %}{% endblock %}
   </head>
   <body>
-    {% block content %}
-    {% endblock %}
+    <div class="document">
+      {% block content %}
+      {% endblock %}
+    </div>
   </body>
 </html>
