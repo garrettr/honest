@@ -1,10 +1,12 @@
 from flask import Flask, render_template, redirect, request
 from flaskext.flatpages import FlatPages
 
+import os
+
 import torcheck
 
 app = Flask(__name__)
-app.debug = True
+#app.debug = True
 
 pages = FlatPages(app)
 
@@ -33,4 +35,5 @@ def page(path):
     return render_template(template, page=page)
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
