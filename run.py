@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flaskext.flatpages import FlatPages
 
 app = Flask(__name__)
+app.debug = True
 
 pages = FlatPages(app)
 
