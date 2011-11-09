@@ -1,10 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from flaskext.flatpages import FlatPages
 
 app = Flask(__name__)
 app.debug = True
 
 pages = FlatPages(app)
+
+@app.route('/')
+def home():
+    return redirect('/home')
+
+@app.route('/upload', methods=['GET'])
+def upload():
+    pass
 
 @app.route('/<path:path>/')
 def page(path):
