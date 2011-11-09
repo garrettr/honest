@@ -5,17 +5,17 @@ body {
 }
 
 .document {
-  width: 940px;
+  width: 600px;
   margin: 24px auto 0 auto;
 }
 
 /* Homepage header */
-.header { text-align:center; font-size:3em; }
+.header { text-align:center; font-size:3em; margin-bottom:8px;}
 
 /* Homepage logo */
 .logo { 
   display: block;
-  margin:10px auto 24px auto;
+  margin: 0 auto;
 }
 
 /* Homepage navigation */
@@ -24,6 +24,7 @@ body {
 .nav {
   float:left;
   width:100%;
+  margin: 24px 0;
   overflow:hidden;
   position:relative;
 }
@@ -81,4 +82,7 @@ body {
   border-radius:          10px;
 }
 
-
+/* Center text */
+.center {
+  text-align: center;
+}
