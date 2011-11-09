@@ -1,12 +1,11 @@
 from flask import Flask, render_template, redirect, request
 from flaskext.flatpages import FlatPages
 
-import os
+import sys, os
 
 import torcheck
 
 app = Flask(__name__)
-#app.debug = True
 
 pages = FlatPages(app)
 
@@ -35,5 +34,17 @@ def page(path):
     return render_template(template, page=page)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    if len(sys.argv) == 2:
+        if sys.argv[1] == "--heroku":
+            port = int(os.environ.get("PORT", 5000))
+            app.run(host='0.0.0.0', port=port)
+        elif sys.argv[1] == "--dev":
+            app.debug = True
+            app.run()
+        else:
+            print "What?"
+            sys.exit(1)
+    else:
+        print "USAGE: python run.y [--heroku, --dev]"
+        sys.exit(1)
+
