@@ -16,7 +16,7 @@ def tor_check(clientIp, ELPort):
     # -- How is this chosen?
     ELTarget = "38.229.70.31"
     # This is the ExitList DNS server we want to query
-    ELHost = "ip-port.org.exitlist.torproject.org"
+    ELHost = "ip-port.exitlist.torproject.org"
 
     # Prepare the question as an A record request
     ELQuestion = ELExitNode + "." + ELPort + "." + ELTarget + "." + ELHost
