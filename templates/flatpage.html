@@ -1,11 +1,9 @@
 <!doctype html>
-<html>
-  <head>
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {% autoescape false %}
+{% extends "layout.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+  {% autoescape false %}
     {{ page.html }}
-    {% endautoescape %}
-  </body>
-</html>
+  {% endautoescape %}
+{% endblock %}
