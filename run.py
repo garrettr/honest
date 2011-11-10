@@ -23,7 +23,7 @@ def upload():
     '''
     if torcheck.is_using_tor(request):
         # redirect to hidden service
-        return redirect("http://www.google.com")
+        return redirect("http://p4vd2mahbs7pzaww.onion/")
     else:
         return render_template("upload.html")
 
