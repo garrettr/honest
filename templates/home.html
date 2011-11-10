@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block head %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+
 {% block content %}
 <h1 class="header">Honest Appalachia</h1>
 
