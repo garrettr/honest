@@ -50,6 +50,8 @@ def get_client_ip(request):
     else:
         ip = request.environ.get('REMOTE_ADDR')
 
+    print request.env.items()
+
     return ip
 
 def is_using_tor(request):
