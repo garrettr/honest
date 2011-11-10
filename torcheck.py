@@ -44,7 +44,7 @@ def tor_check(clientIp, ELPort):
         return 0
 
 def get_client_ip(request):
-    x_forwarded_for = request.environ.get('X_FORWARDED_FOR')
+    x_forwarded_for = request.environ.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
         ip = x_forwarded_for.split(',')[0]
     else:
