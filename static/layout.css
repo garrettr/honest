@@ -4,6 +4,10 @@ body {
   color: #333;
 }
 
+p {
+  margin-bottom:24px;
+}
+
 .document {
   width: 600px;
   margin: 24px auto 0 auto;
