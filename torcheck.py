@@ -50,7 +50,7 @@ def get_client_ip(request):
     else:
         ip = request.environ.get('REMOTE_ADDR')
 
-    print request.env.items()
+    print request.environ.items()
 
     return ip
 
