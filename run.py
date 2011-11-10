@@ -9,9 +9,22 @@ app = Flask(__name__)
 
 pages = FlatPages(app)
 
+def build_pages_hierarchy(pages):
+    '''
+    Builds a hierarchy structure of Page objects from pages
+    '''
+    sorted_p = sorted(pages, key=lambda p: len(p.path.split("/")))
+    return sorted_p
+
+def generate_pages_hierarchy(h):
+    '''
+    Outputs HTML structure of Pages hierarchy
+    '''
+    pass
+
 @app.route('/')
 def home():
-    return redirect('/home')
+    return render_template("home.html")
 
 @app.route('/upload/', methods=['GET'])
 def upload():
